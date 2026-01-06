@@ -15,11 +15,11 @@ Il s’appuie sur des ressources pédagogiques OpenClassrooms et vise à mettre 
 
 ---
 ## Organisation du projet
-Test/
-├── includes/ # fichiers images ou autre
-├── src/ # contenu principal
-├── index.php # fichier principal de liaison
-└── README.md # infos sur le projet
+- Test/
+- ├── includes //fichiers images ou autre
+- ├── src //contenu principal
+- ├── index.php //fichier principal de liaison
+- └── README.md //infos sur le projet
 
 ---
 ## Installation (en local)
@@ -46,9 +46,15 @@ dans un navigateur:
 http://localhost/test/index.php
 ``` 
 
+## Avancement sur openClassroom
+<p> en pourcentage comme sur le site : <b>52%</b></p>
+<progress value="52" max="100"></progress>
+
+---
 ## Évolutions prévues
 - Mise en place d’une architecture MVC simple (si temps possible)
 
+---
 ## Auteur
 **Lenny Codina Saïdi**  
 Étudiant en informatique – Bac+3  
