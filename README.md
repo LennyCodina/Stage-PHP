@@ -21,6 +21,10 @@ Il s’appuie sur des ressources pédagogiques OpenClassrooms et vise à mettre 
 - ├── index.php //fichier principal de liaison
 - └── README.md //infos sur le projet
 
+### branches
+ - dev
+ - main (protégée)
+
 ---
 ## Installation (en local)
 
@@ -48,7 +52,7 @@ http://localhost/test/index.php
 
 ## Avancement sur openClassroom
 <p> en pourcentage comme sur le site : <b>52%</b></p>
-<progress value="52" max="100"></progress>
+<progress value="56" max="100"></progress>
 
 ---
 ## Évolutions prévues
