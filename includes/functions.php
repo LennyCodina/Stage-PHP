@@ -31,3 +31,13 @@ function getRecipes(array $recipes): array
     }
     return $valid_recipes;
 }
+
+function verifyForm($data):array{
+    $err = [];
+    if(!isset($data['email'])) array_push($err, 1);
+    if(!isset($data['message'])) array_push($err, 3);
+    if(!filter_var($data['email'])) array_push($err, 0);
+    if(!trim($data['message'])) array_push($err, 2);
+
+    return $err;
+}

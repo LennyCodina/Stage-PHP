@@ -43,3 +43,14 @@ $recipes = [
         'is_enabled' => false,
     ],
 ];
+
+$errorType = [
+    'wrong email',
+    'email must not be empty',
+    'wrong message',
+    'message must not be empty',
+];
+
+$curErrors = [];
+
+?>

@@ -1,6 +1,13 @@
+<?php
+require_once(__DIR__ . '/../includes/variables.php');
+session_start();
+$curErrors = $_SESSION['curErrors'] ?? [];
+unset($_SESSION['curErrors']);
+session_abort();
+?>
+
 <!DOCTYPE html>
 <html>
-
 
 <head>
     <meta charset="UTF-8">
@@ -10,16 +17,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-
 <body class="d-flex flex-column min-vh-100">
     <div class="container">
         <?php require_once(__DIR__ . '/header.php'); ?>
         <h1>Contactez nous</h1>
-        <form>
+        <form action="valid_Contact.php" method="GET">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help">
-                <div id="email-help" class="form-text">Nous ne revendrons pas votre email.</div>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Votre message</label>
@@ -28,9 +33,19 @@
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
         <br />
+        <div>
+            <?php if(!empty($curErrors)) : ?>
+                <h3 style="color:Red;"> Erreurs lors de l'envoi : </h3>
+                <?php foreach($curErrors as $err) : ?>
+                    <div style="color:Red;">
+                        <?php echo $errorType[$err] ;?>
+                        </br>
+                    </div>
+                <?php endforeach;
+            endif ?>
+        </div>
     </div>
     <?php require_once(__DIR__ . '/footer.php'); ?>
 </body>
-
 
 </html>
